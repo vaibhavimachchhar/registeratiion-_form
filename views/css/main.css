@@ -1,0 +1,122 @@
+.body {
+    font-family: 'Segoe UI';
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url("pexels-mo-eid-1268975-10377281.jpg"); 
+    background-size: cover; 
+    background-position: center;
+}
+
+.overlay {
+    background-color: rgba(247, 234, 244, 0.52);
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 3cm;
+    margin-bottom: 60px;
+}
+
+.welcome-message {
+    font-family: 'sans-serif';
+    font-weight: bold;
+    color: #0a0909;
+    text-align: center;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(237, 145, 207, 0.727);
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.form-container {
+    font-family: 'sans-serif';
+    font-weight: bold;
+    background-color: rgba(247, 234, 244, 0.52);
+    padding: 15px;
+    border-radius: 5px;
+    color: #0a0909;
+    box-shadow: 0 0 20px rgba(203, 0, 162, 0.791);
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 60px;
+}
+
+.registered-section {
+    font-family: 'sans-serif';
+    position: absolute;
+    display: inline-block;
+    left: 38%;
+    width: 24%;
+    font-weight: bold;
+    height: auto;
+    text-align: center;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: rgba(247, 234, 244, 0.52);
+    font-size: 30px;
+}
+
+.form-group {
+    width: 180%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow effect *
+}
+
+.form-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.mssg-bg-success {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.bg-success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    border-radius: 5px;
+    animation: fadeInDown 1s ease forwards;
+    max-width: 80%;
+}
+
+.link {
+    color: #0e93db;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

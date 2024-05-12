@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $( "#form1" ).submit(function(event) {
+                event.preventDefault();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/',
+                    data: $('#form1').serialize(),
+                    dataType: "json",
+                    success: function(response){
+                        $('#form1')[0].reset();
+                        document.getElementById("check").innerHTML=response.Success;
+                        // Hide success message after 3 seconds
+                        setTimeout(function(){
+                            document.getElementById("check").innerHTML="";
+                        }, 3000);
+                        // Redirect to login page if registration is successful
+                        if (response.Success == "You are registered. You can login now.") {
+                            document.getElementById("aa").click();
+                        };
+                    },
+                    error: function() {
+                        // Handle error
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Include your custom CSS file here -->
+    <link rel="stylesheet" href=".articles/css/main.css">
+</head>
+<body class = "body">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="overlay">
+                    <h2 class="welcome-message">Welcome to the world of dreams!!</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-container">
+                    <h1 class="form-title"><b>Register Now</b></h1>
+                    <div class>
+                        <form id="form1" method="post">
+                            <input type="email" name="email" placeholder="E-mail" required="" class="form-control input-field"><br/>
+                            <input type="text" name="username" placeholder="Username" required="" class="form-control input-field"><br/>
+                            <input type="password" name="password" placeholder="Password" required="" class="form-control input-field"><br/>
+                            <input type="password" name="passwordConf" placeholder="Confirm Password" required="" class="form-control input-field"><br/>
+                            <input type="submit" value="Register" class="btn btn-success button">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mssg-bg-success">
+        <span id="check"></span>
+    </div>
+    <div class="registered-section">
+        <span>Already Registered! <a href="/login" class="link">Login</a></span>
+    </div>
+    <!-- Hidden link to trigger login redirection -->
+    <div id="LangTable"><a href="/login" id="aa"></a></div>
+
+</body>
+</html>
